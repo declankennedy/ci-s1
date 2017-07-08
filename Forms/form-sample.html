@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <meta charset="UTF-8">
+      <title>Form</title>
+      <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+   
+      <!--
+         Form with HTML5 tags and basic CSS
+      -->
+      <style type="text/css">
+
+      body{
+         font-family: 'Roboto', sans-serif;
+      }
+         #container{
+            width: 550px;
+            margin: auto;
+
+         }
+
+         legend{
+            font-size: 30px;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid #999;
+            padding: 4px 15px;
+         }
+            
+         label.field{
+            display: block;
+            text-align: right;
+            width: 100px;
+            float: left;
+
+         }
+         input{
+            width: 200px;
+            border-radius: 5px;
+            padding: 6px 8px;
+         }
+         .field{
+            padding: 6px 8px;
+         }
+
+         #currency{
+         	width: 220px;
+         	border-radius: 5px;
+             padding: 6px 8px;
+         }
+
+         fieldset{
+            width: 450px;
+            border: 1px solid #999;
+            border-radius: 20px;
+            clear: both;
+            padding: 20px;
+            margin-bottom: 100px;
+            background-color:rgba(129, 187, 201,.2);
+
+         }
+      </style>
+   </head>
+   <body>
+      <div id="container">
+      <div id="input_types"><!-- wrapper for form-->
+      	<form id="UserRegForm" action="server_side_script.php" method="post">
+      		<fieldset>
+      			<legend> Registration </legend>
+      			<!-- set of related fields  --> 
+
+      			<div class="label"><label for="fname"> First Name:</label>
+      							   <input type="text" name="fname" id="fname" required="" placeholder="Enter your first name" /><br>
+      				<div class="label">
+      				<label for="email"> Email:</label>
+      				<input type="text" name="email" id="email" required="" autofocus="" placeholder="Enter your email" /><br>
+      				<div class="label">
+      				<label for="telephone">Telephone:</label> 
+      				<input type="Telephone" name="telephone" id="telephone" placeholder="Enter your mobile number" /><br>
+      				<div class="label">
+      				<label for="website"> Website URL:</label>
+      				<input type="url" name="website" id="website" placeholder="Enter a website"/><br>
+      				<div class="label">
+      				<label for="password"> Password:</label>
+      				<input type="Password" name="password" id="password" placeholder="Minimum 8 chartacters" /><br>
+      				<input type="submit" value="submit"/>
+      		</fieldset>
+      	</form>
+
+        </div>
+    </div>
+   </body>
+
+</html>
