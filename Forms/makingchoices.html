@@ -49,13 +49,23 @@
              padding: 6px 8px;
          }
 
+         #checkbox {
+            padding: 6px 8px;
+         }
+
+         #checkbox input {
+          width: 25px;
+          margin-top: 20px;
+       }
+
          fieldset{
             width: 450px;
             border: 1px solid #999;
             border-radius: 20px;
             clear: both;
             padding: 20px;
-            margin-bottom: 100px;
+            margin-top: 20px;
+            margin-bottom: 20px;
             background-color:rgba(129, 187, 201,.2);
 
          }
@@ -79,8 +89,8 @@
       				<input type="text" name="passport" id="passport" required="" pattern="[0-9]{7}[A-Za-z]{1}" placeholder="Enter your passport number" title="Seven numbers followed by a single upper or lower case letter."/><br>      				
       				<label for="email" class="field"> Email:</label>
       				<input type="text" name="email" id="email" required="" autofocus="" placeholder="Enter your email" /><br>    		
-      				<label for="telephone" class="field">Telephone:</label> 
-      				<input type="Telephone" name="telephone" id="telephone" pattern="[0,8]{2}[0-9]{8}" placeholder="Enter your mobile number" title="Mobile phone number expected beginning 08********"/><br>
+      				<label for="phonenum" class="field">Telephone:</label> 
+      				<input type="tel" name="phonenum" id="phonenum" pattern="[0,8]{2}[0-9]{8}" placeholder="Enter your mobile number" title="Mobile phone number expected beginning 08********"/><br>
       				<label for="eircode" class="field"> Eircode:</label>
       				<input type="text" name="eircode" id="eircode" required="" pattern="[ACDEFHKNPRTVWXY]{1}[0-9]{1}[0-9W]{1}[ -][0-9ACDEFHKNPRTVWXY]{4}" placeholder="Enter your eircode" title="Eircode is 7 digit code"/><br>     				
       				<label for="creditcard" class="field"> Credit Card:</label>
@@ -90,17 +100,30 @@
       				<label for="website" class="field"> Website URL:</label>
       				<input type="url" name="website" id="website" placeholder="Enter a website"/><br>
       				<label for="password" class="field"> Password:</label>
-      				<input type="Password" name="password" id="password" placeholder="Minimum 8 chartacters" /><br>
+      				<input type="password" name="password" id="password" placeholder="Minimum 8 chartacters" /><br>
                   <label for="date" class="field"> Date:</label>
-                  <input type="date" name="birthday"><br>
-                  <label for="dinner"> Would you like:</label><br>
-                  <input type="checkbox" id="dinner" name="dinner" value="starter"/>Starter
-                  <input type="checkbox" id="dinner" name="dinner" value="main"/>Main
-                  <input type="checkbox" id="dinner" name="dinner" value="dessert"/>Dessert<br>
-                  <label for="gender"> Gender:</label><br><br>
-                  <input type="radio" id="gender" name="gender" value="male"/>Male
-                  <input type="radio" id="gender" name="gender" value="female"/>Female
-                  <input type="radio" id="gender" name="gender" value="other"/>Other<br><br>
+                  <input type="date" id="date" name="birthday"><br>
+                  
+                  <fieldset>
+                  <legend> Would you like:</legend>
+                  <input type="checkbox" id="starter" name="dinner" value="starter"/>
+                  <label for="starter">Starter:</label>
+                  <input type="checkbox" id="main" name="dinner" value="main"/>
+                  <label for="main">Main:</label>
+                  <input type="checkbox" id="dessert" name="dinner" value="dessert"/>
+                  <label for="dessert">Dessert:</label>
+                  </fieldset>
+
+                  <fieldset>
+                  <legend>Gender:</legend>
+                  <input type="radio" id="male" name="gender" value="male"/>
+                  <label for="male">Male:</label>
+                  <input type="radio" id="female" name="gender" value="female"/>
+                  <label for="female">Female:</label>
+                  <input type="radio" id="other" name="gender" value="other"/>
+                  <label for="other">Other:</label>
+                  </fieldset>
+
                   <label for="zodiac" >Signs of the zodiac:</label>
                   <select id="zodiac" >
                      <optgroup label="Fire">
@@ -128,8 +151,8 @@
                     </optgroup>
                      
                   </select><br><br>
-                  <label for="music" >Music Genres:</label>
-                  <input list="music" name="music" placeholder="Whats your music?">
+                  <label>Music Genres:
+                  <input list="music" name="music" placeholder="Whats your music?"></label>
                   <datalist id="music">
                      <option value="Pop">
                      <option value="Rock">
@@ -138,7 +161,7 @@
                      <option value="Classical">
                   </datalist><br>
                   <label for="size" >Size: </label><br>
-                  0<input type="range" name="size" id="size" min="0" max="11"  />11<br>
+                  0<input type="range" name="size" id="size" min="0" max="11"/>11<br>
                   
       				<input type="submit" value="submit"/>
       		</fieldset>
